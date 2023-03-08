@@ -5,6 +5,7 @@ import eu.okaeri.configs.serdes.SerdesRegistry;
 import moe.rafal.configs.serdes.component.converter.ComponentConverter;
 import moe.rafal.configs.serdes.component.converter.impl.LegacyComponentConverter;
 import moe.rafal.configs.serdes.component.converter.impl.minimessage.MiniMessageComponentConverter;
+import moe.rafal.configs.serdes.serializer.BossBarSerializer;
 import moe.rafal.configs.serdes.serializer.TitleSerializer;
 import moe.rafal.configs.serdes.transformer.StringToComponentTransformer;
 import org.jetbrains.annotations.NotNull;
@@ -27,6 +28,7 @@ public class SerdesKyori implements OkaeriSerdesPack {
     public void register(@NotNull SerdesRegistry registry) {
         registry.register(new StringToComponentTransformer(componentConverter));
         registry.register(new TitleSerializer());
+        registry.register(new BossBarSerializer());
         registry.register(new TitleSerializer.TimesSerializer());
     }
 }
