@@ -1,22 +1,17 @@
 package moe.rafal.configs.serdes.component.converter;
 
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 
 import java.util.function.Function;
 
-public class ComponentConverterLegacy implements ComponentConverter {
+public class ComponentConverterImpl implements ComponentConverter {
 
     private final Function<Component, String> mutationFunction;
     private final Function<String, Component> reversedFunction;
 
-    public ComponentConverterLegacy(LegacyComponentSerializer componentSerializer) {
-        this.mutationFunction = componentSerializer::serialize;
-        this.reversedFunction = componentSerializer::deserialize;
-    }
-
-    public ComponentConverterLegacy() {
-        this(LegacyComponentSerializer.legacyAmpersand());
+    protected ComponentConverterImpl(Function<Component, String> mutationFunction, Function<String, Component> reversedFunction) {
+        this.mutationFunction = mutationFunction;
+        this.reversedFunction = reversedFunction;
     }
 
     @Override
