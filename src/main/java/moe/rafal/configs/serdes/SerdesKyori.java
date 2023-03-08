@@ -28,7 +28,7 @@ public class SerdesKyori implements OkaeriSerdesPack {
     public void register(@NotNull SerdesRegistry registry) {
         registry.register(new StringToComponentTransformer(componentConverter));
         registry.register(new TitleSerializer());
-        registry.register(new BossBarSerializer());
         registry.register(new TitleSerializer.TimesSerializer());
+        registry.register(new BossBarSerializer());
     }
 }
