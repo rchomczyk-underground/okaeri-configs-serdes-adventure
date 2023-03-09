@@ -19,8 +19,8 @@ public class BossBarSerializer implements ObjectSerializer<BossBar> {
 
     @Override
     public void serialize(@NotNull BossBar object, @NotNull SerializationData data, @NotNull GenericsDeclaration generics) {
-        data.add("name", object.name(), Comparable.class);
-        data.add("progress", object.progress(), Float.class);
+        data.add("name", object.name(), Component.class);
+        data.add("progress", object.progress(), float.class);
         data.add("color", object.color(), BossBar.Color.class);
         data.add("overlay", object.overlay(), BossBar.Overlay.class);
         data.addCollection("flags", object.flags(), BossBar.Flag.class);
@@ -30,7 +30,7 @@ public class BossBarSerializer implements ObjectSerializer<BossBar> {
     public BossBar deserialize(@NotNull DeserializationData data, @NotNull GenericsDeclaration generics) {
         return BossBar.bossBar(
                 data.get("name", Component.class),
-                data.get("progress", Float.class),
+                data.get("progress", float.class),
                 data.get("color", BossBar.Color.class),
                 data.get("overlay", BossBar.Overlay.class),
                 new HashSet<>(data.getAsList("flags", BossBar.Flag.class))

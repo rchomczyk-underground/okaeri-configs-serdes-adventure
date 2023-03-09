@@ -29,8 +29,7 @@ public class TitleSerializer implements ObjectSerializer<Title> {
         return Title.title(
             data.get("title", Component.class),
             data.get("subtitle", Component.class),
-            data.get("times", Title.Times.class)
-        );
+            data.get("times", Title.Times.class));
     }
 
     public static class TimesSerializer implements ObjectSerializer<Title.Times> {
