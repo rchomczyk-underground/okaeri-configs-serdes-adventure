@@ -20,9 +20,9 @@ public class BossBarSerializer implements ObjectSerializer<BossBar> {
     @Override
     public void serialize(@NotNull BossBar object, @NotNull SerializationData data, @NotNull GenericsDeclaration generics) {
         data.add("name", object.name(), Component.class);
-        data.add("progress", object.progress(), float.class);
-        data.add("color", object.color(), BossBar.Color.class);
-        data.add("overlay", object.overlay(), BossBar.Overlay.class);
+        data.add("progress", object.progress());
+        data.add("color", object.color());
+        data.add("overlay", object.overlay());
         data.addCollection("flags", object.flags(), BossBar.Flag.class);
     }
 
