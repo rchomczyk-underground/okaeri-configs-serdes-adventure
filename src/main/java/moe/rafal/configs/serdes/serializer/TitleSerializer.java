@@ -8,6 +8,8 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.title.Title;
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.time.Duration;
 
 public class TitleSerializer implements ObjectSerializer<Title> {
@@ -48,10 +50,22 @@ public class TitleSerializer implements ObjectSerializer<Title> {
 
         @Override
         public Title.Times deserialize(@NotNull DeserializationData data, @NotNull GenericsDeclaration generics) {
-            return Title.Times.times(
-                data.get("fade-in", Duration.class),
+            return getTimes(
                 data.get("stay-in", Duration.class),
+                data.get("fade-in", Duration.class),
                 data.get("fade-out", Duration.class));
+        }
+
+        @Deprecated
+        private Title.Times getTimes(@NotNull Duration stayIn, @NotNull Duration fadeIn, @NotNull Duration fadeOut) {
+            try {
+                Method method = Title.Times.class.getMethod("times", Duration.class, Duration.class, Duration.class);
+                method.setAccessible(true);
+                return (Title.Times) method.invoke(null, fadeIn, stayIn, fadeOut);
+            } catch (InvocationTargetException | IllegalAccessException | NoSuchMethodException exception) {
+                // noinspection all
+                return Title.Times.of(fadeIn, stayIn, fadeOut);
+            }
         }
     }
 }
