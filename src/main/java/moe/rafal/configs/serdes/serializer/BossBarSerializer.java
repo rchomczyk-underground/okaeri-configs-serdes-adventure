@@ -5,6 +5,9 @@ import eu.okaeri.configs.serdes.DeserializationData;
 import eu.okaeri.configs.serdes.ObjectSerializer;
 import eu.okaeri.configs.serdes.SerializationData;
 import net.kyori.adventure.bossbar.BossBar;
+import net.kyori.adventure.bossbar.BossBar.Color;
+import net.kyori.adventure.bossbar.BossBar.Flag;
+import net.kyori.adventure.bossbar.BossBar.Overlay;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.NotNull;
 
@@ -23,7 +26,7 @@ public class BossBarSerializer implements ObjectSerializer<BossBar> {
         data.add("progress", object.progress());
         data.add("color", object.color());
         data.add("overlay", object.overlay());
-        data.addCollection("flags", object.flags(), BossBar.Flag.class);
+        data.addCollection("flags", object.flags(), Flag.class);
     }
 
     @Override
@@ -31,8 +34,8 @@ public class BossBarSerializer implements ObjectSerializer<BossBar> {
         return BossBar.bossBar(
                 data.get("name", Component.class),
                 data.get("progress", float.class),
-                data.get("color", BossBar.Color.class),
-                data.get("overlay", BossBar.Overlay.class),
-                new HashSet<>(data.getAsList("flags", BossBar.Flag.class)));
+                data.get("color", Color.class),
+                data.get("overlay", Overlay.class),
+                new HashSet<>(data.getAsList("flags", Flag.class)));
     }
 }

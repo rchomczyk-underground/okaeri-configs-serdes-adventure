@@ -14,6 +14,6 @@ repositories {
 }
 
 dependencies {
-    implementation("moe.rafal:okaeri-configs-serdes-adventure:1.0-SNAPSHOT")
+    implementation("moe.rafal:okaeri-configs-serdes-adventure:1.2-SNAPSHOT")
 }
 ```
