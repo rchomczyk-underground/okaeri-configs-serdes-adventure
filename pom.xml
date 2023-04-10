@@ -12,6 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <library.version.okaeri.configs>5.0.0-beta.5</library.version.okaeri.configs>
         <library.version.kyori.adventure>4.13.1</library.version.kyori.adventure>
+        <library.version.jupiter.testing>5.9.2</library.version.jupiter.testing>
         <library.version.jetbrains.annotations>24.0.1</library.version.jetbrains.annotations>
     </properties>
 
@@ -46,6 +47,18 @@
             <artifactId>annotations</artifactId>
             <version>${library.version.jetbrains.annotations}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${library.version.jupiter.testing}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${library.version.jupiter.testing}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

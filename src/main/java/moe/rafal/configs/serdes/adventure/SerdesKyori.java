@@ -15,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class SerdesKyori implements OkaeriSerdesPack {
 
-    private final ComponentConverter componentConverter;
+    final ComponentConverter componentConverter;
 
     public SerdesKyori(ComponentConverter componentConverter) {
         this.componentConverter = componentConverter;
