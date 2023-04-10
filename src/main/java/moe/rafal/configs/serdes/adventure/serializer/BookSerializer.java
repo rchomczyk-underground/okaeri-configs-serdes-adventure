@@ -1,4 +1,4 @@
-package moe.rafal.configs.serdes.serializer;
+package moe.rafal.configs.serdes.adventure.serializer;
 
 import eu.okaeri.configs.schema.GenericsDeclaration;
 import eu.okaeri.configs.serdes.DeserializationData;

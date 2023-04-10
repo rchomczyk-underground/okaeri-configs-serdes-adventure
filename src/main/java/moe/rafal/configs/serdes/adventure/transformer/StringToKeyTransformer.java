@@ -1,4 +1,4 @@
-package moe.rafal.configs.serdes.transformer;
+package moe.rafal.configs.serdes.adventure.transformer;
 
 import eu.okaeri.configs.schema.GenericsPair;
 import eu.okaeri.configs.serdes.BidirectionalTransformer;

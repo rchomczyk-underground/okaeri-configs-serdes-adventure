@@ -1,16 +1,16 @@
-package moe.rafal.configs.serdes;
+package moe.rafal.configs.serdes.adventure;
 
 import eu.okaeri.configs.serdes.OkaeriSerdesPack;
 import eu.okaeri.configs.serdes.SerdesRegistry;
-import moe.rafal.configs.serdes.component.converter.ComponentConverter;
-import moe.rafal.configs.serdes.component.converter.impl.LegacyComponentConverter;
-import moe.rafal.configs.serdes.component.converter.impl.minimessage.MiniMessageComponentConverter;
-import moe.rafal.configs.serdes.serializer.BookSerializer;
-import moe.rafal.configs.serdes.serializer.BossBarSerializer;
-import moe.rafal.configs.serdes.serializer.SoundSerializer;
-import moe.rafal.configs.serdes.serializer.TitleSerializer;
-import moe.rafal.configs.serdes.transformer.StringToComponentTransformer;
-import moe.rafal.configs.serdes.transformer.StringToKeyTransformer;
+import moe.rafal.configs.serdes.adventure.component.converter.ComponentConverter;
+import moe.rafal.configs.serdes.adventure.component.converter.impl.LegacyComponentConverter;
+import moe.rafal.configs.serdes.adventure.component.converter.impl.minimessage.MiniMessageComponentConverter;
+import moe.rafal.configs.serdes.adventure.serializer.BookSerializer;
+import moe.rafal.configs.serdes.adventure.serializer.BossBarSerializer;
+import moe.rafal.configs.serdes.adventure.serializer.SoundSerializer;
+import moe.rafal.configs.serdes.adventure.serializer.TitleSerializer;
+import moe.rafal.configs.serdes.adventure.transformer.StringToComponentTransformer;
+import moe.rafal.configs.serdes.adventure.transformer.StringToKeyTransformer;
 import org.jetbrains.annotations.NotNull;
 
 public class SerdesKyori implements OkaeriSerdesPack {

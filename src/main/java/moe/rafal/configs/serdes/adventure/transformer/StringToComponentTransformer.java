@@ -1,9 +1,9 @@
-package moe.rafal.configs.serdes.transformer;
+package moe.rafal.configs.serdes.adventure.transformer;
 
 import eu.okaeri.configs.schema.GenericsPair;
 import eu.okaeri.configs.serdes.BidirectionalTransformer;
 import eu.okaeri.configs.serdes.SerdesContext;
-import moe.rafal.configs.serdes.component.converter.ComponentConverter;
+import moe.rafal.configs.serdes.adventure.component.converter.ComponentConverter;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.NotNull;
 

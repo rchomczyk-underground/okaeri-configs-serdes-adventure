@@ -1,6 +1,6 @@
-package moe.rafal.configs.serdes.component.converter.impl;
+package moe.rafal.configs.serdes.adventure.component.converter.impl;
 
-import moe.rafal.configs.serdes.component.converter.ComponentConverterImpl;
+import moe.rafal.configs.serdes.adventure.component.converter.ComponentConverterImpl;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 
 public class LegacyComponentConverter extends ComponentConverterImpl {
