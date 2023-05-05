@@ -11,6 +11,7 @@ import moe.rafal.configs.serdes.adventure.serializer.SoundSerializer;
 import moe.rafal.configs.serdes.adventure.serializer.TitleSerializer;
 import moe.rafal.configs.serdes.adventure.transformer.StringToComponentTransformer;
 import moe.rafal.configs.serdes.adventure.transformer.StringToKeyTransformer;
+import moe.rafal.configs.serdes.adventure.transformer.StringToNamedColorTransformer;
 import org.jetbrains.annotations.NotNull;
 
 public class SerdesKyori implements OkaeriSerdesPack {
@@ -31,6 +32,7 @@ public class SerdesKyori implements OkaeriSerdesPack {
     public void register(@NotNull SerdesRegistry registry) {
         registry.register(new StringToComponentTransformer(componentConverter));
         registry.register(new StringToKeyTransformer());
+        registry.register(new StringToNamedColorTransformer());
         registry.register(new BookSerializer());
         registry.register(new SoundSerializer());
         registry.register(new TitleSerializer());
