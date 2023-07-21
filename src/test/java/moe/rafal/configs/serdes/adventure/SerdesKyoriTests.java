@@ -1,7 +1,7 @@
 package moe.rafal.configs.serdes.adventure;
 
 import moe.rafal.configs.serdes.adventure.component.converter.impl.LegacyComponentConverter;
-import moe.rafal.configs.serdes.adventure.component.converter.impl.minimessage.MiniMessageComponentConverter;
+import moe.rafal.configs.serdes.adventure.component.converter.impl.MiniMessageComponentConverter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertAll;

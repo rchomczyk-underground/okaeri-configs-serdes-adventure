@@ -4,7 +4,7 @@ import eu.okaeri.configs.serdes.OkaeriSerdesPack;
 import eu.okaeri.configs.serdes.SerdesRegistry;
 import moe.rafal.configs.serdes.adventure.component.converter.ComponentConverter;
 import moe.rafal.configs.serdes.adventure.component.converter.impl.LegacyComponentConverter;
-import moe.rafal.configs.serdes.adventure.component.converter.impl.minimessage.MiniMessageComponentConverter;
+import moe.rafal.configs.serdes.adventure.component.converter.impl.MiniMessageComponentConverter;
 import moe.rafal.configs.serdes.adventure.serializer.BookSerializer;
 import moe.rafal.configs.serdes.adventure.serializer.BossBarSerializer;
 import moe.rafal.configs.serdes.adventure.serializer.SoundSerializer;

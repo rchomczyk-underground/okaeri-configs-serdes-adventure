@@ -1,4 +1,4 @@
-package moe.rafal.configs.serdes.adventure.component.converter.impl.minimessage;
+package moe.rafal.configs.serdes.adventure.component.converter.impl;
 
 import moe.rafal.configs.serdes.adventure.component.converter.ComponentConverter;
 import net.kyori.adventure.text.Component;
