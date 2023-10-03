@@ -113,4 +113,15 @@
         </resources>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>auroramc-pl-repo-releases</id>
+            <url>https://repo.auroramc.pl/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>auroramc-pl-repo-snapshots</id>
+            <url>https://repo.auroramc.pl/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
